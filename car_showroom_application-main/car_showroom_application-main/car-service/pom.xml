@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>car-showroom-frontend</artifactId>
+    <artifactId>car-service</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>car-showroom-frontend</name>
+    <name>car-service</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -24,11 +24,15 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -36,6 +40,18 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.example.CarServiceApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+            
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -54,7 +70,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.example.carshowroomfrontend.CarShowroomFrontendApplication</mainClass>
+                    <mainClass>com.example.carservice.CarServiceApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

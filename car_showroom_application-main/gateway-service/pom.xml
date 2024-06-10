@@ -36,18 +36,6 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.example.GatewayServiceApplication</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-            
     <dependencyManagement>
         <dependencies>
             <dependency>

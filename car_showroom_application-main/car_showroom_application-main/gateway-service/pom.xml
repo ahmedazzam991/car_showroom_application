@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>car-showroom-frontend</artifactId>
+    <artifactId>gateway-service</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>car-showroom-frontend</name>
+    <name>gateway-service</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -24,11 +24,11 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -36,6 +36,18 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.example.GatewayServiceApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+            
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -53,9 +65,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.example.carshowroomfrontend.CarShowroomFrontendApplication</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>
