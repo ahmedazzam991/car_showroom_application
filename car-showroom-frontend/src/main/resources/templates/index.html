@@ -5,14 +5,30 @@
 </head>
 <body>
     <h1>Car Showroom</h1>
-    <h2>Cars</h2>
+
+    <form action="#" th:action="@{/search}" th:object="${search}" method="get">
+        <label for="make">Make:</label>
+        <input type="text" id="make" name="make" th:value="${search.make}">
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" th:value="${search.model}">
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Search Results</h2>
     <ul>
-        <li th:each="car : ${cars}" th:text="${car.make} + ' ' + ${car.model} + ' - ' + ${car.price}"></li>
+        <li th:each="car : ${searchResults}" th:text="${car.make} + ' ' + ${car.model} + ' - Price: ' + ${car.price}"></li>
     </ul>
+
+    <h2>All Cars</h2>
+    <ul>
+        <li th:each="car : ${cars}" th:text="${car.make} + ' ' + ${car.model} + ' - Price: ' + ${car.price}"></li>
+    </ul>
+
     <h2>Showrooms</h2>
     <ul>
         <li th:each="showroom : ${showrooms}" th:text="${showroom.name} + ' - ' + ${showroom.location}"></li>
     </ul>
 </body>
 </html>
+
 

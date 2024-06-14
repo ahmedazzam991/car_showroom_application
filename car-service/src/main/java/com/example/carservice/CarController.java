@@ -21,5 +21,10 @@ public class CarController {
     public Car createCar(@RequestBody Car car) {
         return carRepository.save(car);
     }
+
+    @GetMapping("/search")
+    public List<Car> searchCars(@RequestParam String make, @RequestParam String model) {
+        return carRepository.findByMakeContainingIgnoreCaseAndModelContainingIgnoreCase(make, model);
+    }
 }
 
