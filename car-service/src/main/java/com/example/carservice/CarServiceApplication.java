@@ -1,14 +1,25 @@
 package com.example.carservice;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
+
+import javax.annotation.PostConstruct;
 
 @SpringBootApplication
-@EnableEurekaClient
 public class CarServiceApplication {
+
+    @Value("${spring.datasource.url}")
+    private String dbUrl;
+
     public static void main(String[] args) {
         SpringApplication.run(CarServiceApplication.class, args);
+    }
+
+    @PostConstruct
+    public void printDbUrl() {
+        System.out.println("Database URL: " + dbUrl);
     }
 }
 

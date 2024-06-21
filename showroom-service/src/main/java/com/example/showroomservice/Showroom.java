@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
@@ -17,9 +18,11 @@ public class Showroom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+
+    @NotNull(message = "Location is mandatory")
     private String location;
 
-    // Getters and Setters
+    @NotNull(message = "Name is mandatory")
+    private String name;
 }
 

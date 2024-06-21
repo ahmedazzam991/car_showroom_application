@@ -1,9 +1,12 @@
 com/example/carshowroomfrontend/IndexController$1.class
 com/example/carshowroomfrontend/HealthCheckController.class
+com/example/carshowroomfrontend/ProfileLogger.class
+com/example/carshowroomfrontend/config/WebConfig$1.class
 com/example/carshowroomfrontend/RestTemplateConfig.class
 com/example/carshowroomfrontend/IndexController$2.class
 com/example/carshowroomfrontend/IndexController$3.class
 com/example/carshowroomfrontend/SearchForm.class
+com/example/carshowroomfrontend/config/WebConfig.class
 com/example/carshowroomfrontend/Car.class
 com/example/carshowroomfrontend/IndexController$4.class
 com/example/carshowroomfrontend/JdbcTemplateConfig.class

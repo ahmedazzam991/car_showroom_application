@@ -3,6 +3,8 @@
 /home/azzam/car_showroom_application/car-showroom-frontend/src/main/java/com/example/carshowroomfrontend/HealthCheckController.java
 /home/azzam/car_showroom_application/car-showroom-frontend/src/main/java/com/example/carshowroomfrontend/IndexController.java
 /home/azzam/car_showroom_application/car-showroom-frontend/src/main/java/com/example/carshowroomfrontend/JdbcTemplateConfig.java
+/home/azzam/car_showroom_application/car-showroom-frontend/src/main/java/com/example/carshowroomfrontend/WebConfig.java
 /home/azzam/car_showroom_application/car-showroom-frontend/src/main/java/com/example/carshowroomfrontend/CarShowroomFrontendApplication.java
+/home/azzam/car_showroom_application/car-showroom-frontend/src/main/java/com/example/carshowroomfrontend/ProfileLogger.java
 /home/azzam/car_showroom_application/car-showroom-frontend/src/main/java/com/example/carshowroomfrontend/RestTemplateConfig.java
 /home/azzam/car_showroom_application/car-showroom-frontend/src/main/java/com/example/carshowroomfrontend/Showroom.java
